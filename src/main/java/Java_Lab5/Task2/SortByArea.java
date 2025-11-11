@@ -2,7 +2,6 @@ package Java_Lab5.Task2;
 
 import java.util.Comparator;
 
-
 public class SortByArea implements Comparator<Shape> {
 
     @Override
