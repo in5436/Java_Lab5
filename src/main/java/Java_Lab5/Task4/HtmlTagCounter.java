@@ -15,7 +15,6 @@ public class HtmlTagCounter {
     private static final Pattern TAG_PATTERN = Pattern.compile("<([a-zA-Z0-9]+)");
 
     public Map<String, Integer> countTags(String urlString) throws IOException, MalformedURLException {
-
         Map<String, Integer> tagCounts = new HashMap<>();
 
         URL url = new URL(urlString);
@@ -29,11 +28,9 @@ public class HtmlTagCounter {
 
             String line;
             while ((line = reader.readLine()) != null) {
-
                 Matcher matcher = TAG_PATTERN.matcher(line);
 
                 while (matcher.find()) {
-
                     String tagName = matcher.group(1).toLowerCase();
 
                     int currentCount = tagCounts.getOrDefault(tagName, 0);
